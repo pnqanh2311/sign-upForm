@@ -56,5 +56,6 @@ input[type="submit"]:hover{
                 padding: 1.2rem;
                 text-align: center;
             }
-    
-  
+            #checkbox{
+                text-align: left; margin-top: 1rem;
+            }

@@ -14,7 +14,7 @@
                         <img src="logo.png" alt="logo" width="733" length="202">
                 </header>
                 <h1>Welcome to CRYPTA!</h1>
-        <form action="signup.html" method="POST">
+        <form id="form" action="signup.html" method="GET">
         <fieldset class="section">
 <Legend >Create Your Account</Legend>
             <label for="fname"> First Name </label>
@@ -75,7 +75,7 @@
                          </fieldset>         
                          <fieldset>
                                 <legend>Legal / Information Sharing Agreements</legend>
-                                <input type="checkbox" id="agreement">
+                                <input type="checkbox" id="agreement" required>
                                 <p>By checking the box, you agree to collect, store, and share your personal and financial information as necessary to provide our services. This may include sharing information with third-party partners, financial institutions, and service providers to process transactions, verify your identity, and comply with legal requirements.</p>
                                 <p>Our Privacy Policy will protect personal information. You can withdraw consent anytime, but this may affect your ability to use our services.</p>
                          </fieldset>  
@@ -84,19 +84,51 @@
                         <label for="nameoncard"> Name on Card</label>
                         <input type="text" id="nameoncard"required>
                          <label for="Cnumber">Card number</label> 
-                         <input type="text" name="Cnumber" id="Cnumber"required> 
+                         <input type="text" name="Cnumber" id="Cnumber" minlength="12" required> 
                          <label for="cvv">CVV Number</label>
-                         <input type="number" id="cvv" maxlength="3" minlength="3">
-                      
+                         <input type="number" id="cvv"  minlength="3" required>
+                     <div id="checkbox">  <input type="checkbox" id="saveyourcard">
+                         <label style="display: inline;" for="saveyourcard"> Save your card </label> </div> 
+                                
                         </fieldset>
-                        <div>  <input type="checkbox" id="saveyourcard">
-                                <label for="saveyourcard"> Save your card </label> </div> 
+                        
 
              <div> <input type="submit" value="Sign Up"> </div>
                 </form>
         <footer>
     
                 <small>Copyright &copy; 2024 CRYPTA. All Rights Reserved.</small> </footer>
+<Script>
+         const form = document.getElementById('form')
+        const fname_input = document.getElementById('fname')
+        const lname_input = document.getElementById('lname')
+        const emai_inputl = document.getElementById('email')
+        const pass_input = document.getElementById('pass')
+        const dob_input = document.getElementById('dob')
+        const phone_input = document.getElementById('phone')
+        const Address_input = document.getElementById('Address')
+        const Pcode_input = document.getElementById('Pcode')
+        const income_input = document.getElementById('income')
+        const experience_input = document.getElementById('experience')
+        const low_input = document.getElementById('low')
+        const moderate_input = document.getElementById('moderate')
+        const high_input = document.getElementById('high')
+        const agreement_input = document.getElementById('agreement')
+        const nameoncard_input = document.getElementById('nameoncard')
+        const Cnumber_input = document.getElementById('Cnumber')
+        const cvv_input = document.getElementById('cvv')
+        const saveyourcard_input = document.getElementById('saveyourcard')
 
+
+    
+        email.addEventListener("input", (event) =>{
+                if(email.validity.typeMismatch) {
+                    email.setCustomValidity("Please Enter a Correct Email");
+                } else{
+                    email.setCustomValidity("");
+                }
+            })
+
+</Script>
 	</body>
 </html>
