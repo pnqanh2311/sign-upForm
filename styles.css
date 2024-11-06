@@ -3,9 +3,48 @@
     box-sizing:border-box;
  }
  body{
-    width: 60%;
+    width: 50%;
     margin: auto;
     font-family: "Montserrat", "Bebas Neue"," Anton",'Helvetica';
     background-color: #0a1912;
-    color: white;
+
  }
+ header{
+    text-align: center;
+ }
+ form{
+    background-color: white;
+    color:#0a1912;
+    padding:3rem; 
+ }
+ h1{
+    color: #33845B; text-align: center;
+ }
+ label{
+    display:block;        
+   
+}
+legend{
+    color:#33845B;
+    font-weight: bold; font-size: 1.5rem; text-align: center; border: none;
+}
+ input[type="submit"]{
+    background-color:#f95919;
+    color: white; font-weight: bold; font-size: 1.5rem;
+    padding:0.5rem;
+    cursor:pointer;
+    border: none; margin: 2rem; }
+input[type="submit"]:hover{
+    background-color: #33845B; 
+    color: white;}
+    input[type="radio"]+ label{
+        display:inline;
+        cursor: pointer;
+    }
+    fieldset.section{
+        display: grid;
+				grid-template-columns: 1fr 1fr ; 
+				grid-gap: 1rem;
+			}
+    
+  
