@@ -33,7 +33,8 @@ legend{
     color: white; font-weight: bold; font-size: 1.5rem;
     padding:0.5rem;
     cursor:pointer;
-    border: none; margin: 2rem; }
+    border: none; margin: 2rem; width: 50%; 
+}
 input[type="submit"]:hover{
     background-color: #33845B; 
     color: white;}
@@ -46,5 +47,14 @@ input[type="submit"]:hover{
 				grid-template-columns: 1fr 1fr ; 
 				grid-gap: 1rem;
 			}
+            div{
+               text-align: center;
+            }
+            footer{
+                font-size: 1.1rem;
+                color: white;
+                padding: 1.2rem;
+                text-align: center;
+            }
     
   
