@@ -100,7 +100,21 @@
                 <small>Copyright &copy; 2024 CRYPTA. All Rights Reserved.</small> </footer>
 <Script>
 
-
+function checkRadio() {
+  const radios = document.querySelectorAll('input[name="risk"]');
+  
+  // Loop through each radio button
+  radios.forEach(radio => {
+    if (radio.checked) {
+      // If a radio is checked, make sure the others are unchecked
+      radios.forEach(otherRadio => {
+        if (otherRadio !== radio) {
+          otherRadio.checked = false;
+        }
+      });
+    }
+  });
+}
            
         email.addEventListener("input", (event) =>{
                 if(email.validity.typeMismatch) {
@@ -110,7 +124,7 @@
                 }
             })
             
-         form.addEventListener("submit", (event)=>{
+            form.addEventListener("submit", (event)=>{
             event.preventDefault();
          })
 
